@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odin Signup Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Importing the Norsebold font -->
+  <link href="https://fonts.googleapis.com/css2?family=Norsebold&display=swap" rel="stylesheet">
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Norsebold', sans-serif; /* Use Norsebold font */
+    display: flex;
+    height: 100vh;
+  }
+
+  .container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Ensure full viewport height */
+  }
+
+  .left-side {
+    background: url('./halie-west-25xggax4bSA-unsplash.jpg') no-repeat center center;
+    background-size: cover;
+    width: 50%; /* Limit the left-side to 50% of the screen */
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text */
+  }
+
+  .logo {
+    font-size: 48px;
+    color: white;
+    margin-bottom: 20px; /* Add space below the logo text */
+  }
+
+  .right-side {
+    width: 50%; /* Limit the right-side to 50% of the screen */
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f9f9f9; /* Optional: Light background color for the right side */
+  }
+
+  .text-content h2 {
+    font-size: 24px;
+  }
+
+  .text-content p {
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+
+  form {
+    margin-top: 30px;
+  }
+
+  h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-group input {
+    width: 48%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4b613b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  button:hover {
+    background-color: #3e5134;
+  }
+
+  .error-message {
+    color: red;
+    display: none;
+  }
+
+  a {
+    color: #4b613b;
+  }
+
+  .odin-logo {
+    width: 100px; /* Adjust the size of the logo */
+    margin-bottom: 20px; /* Add space below the logo */
+  }
+</style>
+<body>
+  <div class="container">
+    <!-- Left Side: Background Image & Logo -->
+    <div class="left-side">
+      <img src="odin-lined.png" alt="Odin Logo" class="odin-logo"> <!-- Add your Odin logo here -->
+      <div class="logo">
+        <h1>ODIN</h1>
+      </div>
+    </div>
+    
+    <!-- Right Side: Signup Form -->
+    <div class="right-side">
+      <div class="text-content">
+        <h2>This is not a real online service!</h2>
+        <p>You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started. <em>You know you want to.</em></p>
+      </div>
+      <form id="signup-form">
+        <h3>Let's do this!</h3>
+        <div class="form-group">
+          <input type="text" placeholder="First Name" id="first-name">
+          <input type="text" placeholder="Last Name" id="last-name">
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Email" id="email">
+          <input type="tel" placeholder="Phone Number" id="phone-number">
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" id="password">
+          <input type="password" placeholder="Confirm Password" id="confirm-password">
+        </div>
+        <p class="error-message" id="error-message">* Passwords do not match</p>
+        <button type="submit">Create Account</button>
+      </form>
+      <p>Already have an account? <a href="#">Log in</a></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
